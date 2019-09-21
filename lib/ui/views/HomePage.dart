@@ -1,5 +1,6 @@
 import 'package:brainy_tasks/features/common/ConnectivityService.dart';
 import 'package:brainy_tasks/features/home/HomeViewModel.dart';
+import 'package:brainy_tasks/ui/widgets/logo/BTLogo.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,7 @@ class HomePage extends StatelessWidget {
     ConnectivityStatus c = Provider.of<ConnectivityStatus>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome'),
+        title: BTLogo(),
       ),
       body: c == ConnectivityStatus.Offline
           ? Center(
